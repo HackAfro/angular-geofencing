@@ -9,6 +9,7 @@ import { AgmCoreModule } from '@agm/core';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PusherService } from './pusher.service';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { PusherService } from './pusher.service';
     AppComponent,
     AdminComponent,
     HomeComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
