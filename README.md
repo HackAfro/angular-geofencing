@@ -5,7 +5,6 @@ Realtime location monitoring using Pusher and Angular
 - [Angular](https://angular.io)
 - [Express](https://expressjs.com/)
 - [Pusher](https://pusher.com)
-- [Google Maps](https://cloud.google.com/maps-platform/)
 - A [Pusher account](https://pusher.com/signup) and [Pusher app credentials](http://dashboard.pusher.com/)
 
 
@@ -36,4 +35,4 @@ PUSHER_APP_SECRET=app-secret
 * [Angular](https://angular.io)
 * [Express](https://expressjs.com/)
 * [Pusher](https://pusher.com)
-* [ChartJs](http://www.chartjs.org/) 
+* [Google Maps](https://cloud.google.com/maps-platform/)
