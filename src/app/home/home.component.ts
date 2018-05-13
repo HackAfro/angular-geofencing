@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
+  username = 'J. User'
+
   pingServer(location) {
     this.http
       .post('http://localhost:4000/ping', location)
