@@ -12,7 +12,8 @@ declare const google;
 export class AdminComponent implements OnInit {
   constructor(private loader: MapsAPILoader, private pusher: PusherService) {}
 
-  theShopPolygon;
+  theRanchPolygon;
+  username = 'J. Admin'
   showAlert = false;
   zoom = 15;
   center = {
@@ -32,7 +33,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
     this.loader.load().then(() => {
-      this.theShopPolygon = new google.maps.Polygon({ paths: this.polygon });
+      this.theRanchPolygon = new google.maps.Polygon({ paths: this.polygon });
     });
 
     const channel = this.pusher.init();
@@ -42,7 +43,7 @@ export class AdminComponent implements OnInit {
       };
       const latLng = new google.maps.LatLng(position);
       if (
-        !google.maps.geometry.poly.containsLocation(latLng, this.theShopPolygon)
+        !google.maps.geometry.poly.containsLocation(latLng, this.theRanchPolygon)
       ) {
         this.showAlert = true;
       }
