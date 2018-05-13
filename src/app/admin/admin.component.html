@@ -1,17 +1,4 @@
-<header>
-  <div class="brand">
-    <h5>The Logo</h5>
-  </div>
-  <div class="nav">
-    <ul>
-      <li>
-        <img src="/assets/boy.svg" alt="avatar">
-        <span>J. Admin</span>
-      </li>
-    </ul>
-  </div>
-</header>
-
+<app-header [username]="username"></app-header>
 <div class="main">
   <h3>Admin</h3>
 
@@ -21,6 +8,6 @@
 
   <h4>Location Alerts</h4>
   <div class="alert" [hidden]="!showAlert">
-    <p>This user has left the City</p>
+    <p>This user has left the ranch</p>
   </div>
 </div>
