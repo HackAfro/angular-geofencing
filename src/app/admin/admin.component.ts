@@ -15,7 +15,8 @@ export class AdminComponent implements OnInit {
   theRanchPolygon;
   username = 'J. Admin'
   showAlert = false;
-  zoom = 15;
+  showLocationUpdate = false;
+  zoom = 16;
   center = {
     lat: 6.435838,
     lng: 3.451384,
@@ -42,6 +43,7 @@ export class AdminComponent implements OnInit {
         ...position,
       };
       const latLng = new google.maps.LatLng(position);
+      this.showLocationUpdate = true;
       if (
         !google.maps.geometry.poly.containsLocation(latLng, this.theRanchPolygon)
       ) {
