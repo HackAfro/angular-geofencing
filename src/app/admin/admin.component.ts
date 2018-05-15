@@ -13,7 +13,8 @@ export class AdminComponent implements OnInit {
   constructor(private loader: MapsAPILoader, private pusher: PusherService) {}
 
   theRanchPolygon;
-  username = 'J. Admin'
+  username = 'J. Admin';
+  message = '';
   showAlert = false;
   showLocationUpdate = false;
   zoom = 16;
@@ -44,10 +45,13 @@ export class AdminComponent implements OnInit {
       };
       const latLng = new google.maps.LatLng(position);
       this.showLocationUpdate = true;
+      this.message = "The user's location has changed";
       if (
         !google.maps.geometry.poly.containsLocation(latLng, this.theRanchPolygon)
       ) {
         this.showAlert = true;
+      }else{
+        this.message = 'The user is currently in the ranch'
       }
     });
   }
